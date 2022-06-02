@@ -7,7 +7,7 @@
               </v-list-item-action>
   
               <v-list-item-content>
-                <v-list-item-title>Notifications</v-list-item-title>
+                <v-list-item-title>{{TarefaComponente.titulo}}</v-list-item-title>
                 <v-list-item-subtitle></v-list-item-subtitle>
               </v-list-item-content>
             </template>
@@ -18,13 +18,8 @@
 <script>
     
     export default {
-      name: 'multi-word',
-
+      props:['TarefaComponente'],
     }
-
-
-
-
 
 </script>
 

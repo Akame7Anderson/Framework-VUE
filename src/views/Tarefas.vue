@@ -15,19 +15,34 @@
         multiple
         active-class=""
       >
-        <Tarefa />
+      <div v-for="TarefaComponente, index in tarefas"
+      :key="index"
+      >
+        <TarefaComponente
+          :TarefaComponente="TarefaComponente"
+        />
+
+      </div>
+        
       </v-list-item-group>
     </v-list>
     </div>
 </template>
 
 <script>
-  import Tarefa from '../components/Tarefas/tarefacomp.vue'
+  import TarefaComponente from '../components/Tarefas/TarefaComponente.vue'
   export default {
     name: 'multi-word',
 
     components: {
-      Tarefa
+      TarefaComponente
     },
+    data(){
+      return{
+        tarefas:[
+          {titulo:"Ir ao mercado", concluido:false},
+        ]
+      }
+    }
   }
 </script>
