@@ -20,8 +20,10 @@ export default new Vuex.Store({
             titulo,
             concluido:false
           })
-          this.campoInput = null;
         }
+      },
+        removeTarefa(state, id){
+        state.tarefas = state.tarefas.filter(TarefaComponente => TarefaComponente.id !== id)
     }
   },
   actions: {
